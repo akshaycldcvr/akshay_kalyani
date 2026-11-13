@@ -2,9 +2,9 @@ name: MLOps Data Quality Pipeline
 
 on:
   push:
-    branches: [ mlops-poc ]
+    branches: [ main ]
   pull_request:
-    branches: [ mlops-poc ]
+    branches: [ main ]
   workflow_dispatch:
 
 env:
