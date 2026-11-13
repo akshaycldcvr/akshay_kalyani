@@ -3,8 +3,8 @@ name: MLOps Data Quality Pipeline
 on:
   push:
     branches: [ mlops-poc ]
-  # pull_request:
-  #   branches: [ main ]
+  pull_request:
+    branches: [ mlops-poc ]
   workflow_dispatch:
 
 jobs:
@@ -35,5 +35,5 @@ jobs:
           # Debug: print username and host length to verify secrets are loading
           echo "Connecting to host: ${POSTGRES_HOST}"
           echo "Using database user: ${POSTGRES_USER}"
-          
+
           soda scan -d my_cloud_postgres -c configuration.yml checks.yml
