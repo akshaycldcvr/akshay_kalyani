@@ -32,10 +32,5 @@ jobs:
           pip install soda-core-postgres psycopg2-binary
 
       - name: Run Soda Scan against Cloud Database
-        env:
-          POSTGRES_HOST: ${{ secrets.DB_HOST }}
-          POSTGRES_USER: ${{ secrets.DB_USER }}
-          POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          POSTGRES_NAME: ${{ secrets.DB_NAME }}
         run: |
           soda scan -d my_cloud_postgres -c configuration.yml checks.yml
