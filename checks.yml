@@ -1,0 +1,9 @@
+checks for customers:
+  - row_count > 0
+  - missing_count(customer_id) = 0
+  - missing_percent(email) < 15%
+  - invalid_count(email) = 0 where valid format is email
+  - fail(age):
+      name: Unrealistic age distribution
+      query: SELECT COUNT(*) FROM customers WHERE age < 18 OR age > 100
+      compare: equals 0
