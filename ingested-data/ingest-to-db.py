@@ -5,7 +5,7 @@ from sqlalchemy import create_engine, text
 # --- Configuration (Hardcoded except for password) ---
 DB_USER = "postgres"  # Replace with your DB username if different
 DB_PASSWORD = os.getenv("DB_PASSWORD")
-DB_HOST = "35.192.179.98"  # Replace with your RDS endpoint or Cloud SQL IP
+DB_HOST = "34.60.200.55"  # Replace with your RDS endpoint or Cloud SQL IP
 TARGET_DB_NAME = "data_valid"  # The database where data will be pushed
 
 # Fail fast if password environment variable is missing
