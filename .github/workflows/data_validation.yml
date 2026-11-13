@@ -32,4 +32,8 @@ jobs:
           POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
           POSTGRES_NAME: ${{ secrets.DB_NAME }}
         run: |
+          # Debug: print username and host length to verify secrets are loading
+          echo "Connecting to host: ${POSTGRES_HOST}"
+          echo "Using database user: ${POSTGRES_USER}"
+          
           soda scan -d my_cloud_postgres -c configuration.yml checks.yml
