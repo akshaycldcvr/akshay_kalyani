@@ -2,7 +2,7 @@ name: MLOps Data Quality Pipeline
 
 on:
   push:
-    branches: [ p1-data-validation ]
+    branches: [ mlops-poc ]
   # pull_request:
   #   branches: [ main ]
   workflow_dispatch:
