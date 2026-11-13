@@ -1,0 +1,8 @@
+data_source my_cloud_postgres:
+  type: postgres
+  connection:
+    host: ${POSTGRES_HOST}
+    port: 5432
+    dbname: data_valid
+    user: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
